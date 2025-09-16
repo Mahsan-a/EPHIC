@@ -470,10 +470,10 @@ def ROC_full_figure_panel(results, target_results, save_folder):
     pediatric_cm = target_results["conf_matrix"]
     pediatric_cm_norm = pediatric_cm.astype('float') / pediatric_cm.sum(axis=1, keepdims=True)
     pediatric_cm_norm = np.ceil(pediatric_cm_norm * 100) / 100
-    pediatric_cm_norm[0, 0] = pediatric_cm_norm[0, 0]+0.02
-    pediatric_cm_norm[1, 1] = pediatric_cm_norm[1, 1]+0.02
-    pediatric_cm_norm[0, 1] = pediatric_cm_norm[0, 1]-0.02
-    pediatric_cm_norm[1, 0] = pediatric_cm_norm[1, 0]-0.02
+    pediatric_cm_norm[0, 0] = pediatric_cm_norm[0, 0]
+    pediatric_cm_norm[1, 1] = pediatric_cm_norm[1, 1]
+    pediatric_cm_norm[0, 1] = pediatric_cm_norm[0, 1]
+    pediatric_cm_norm[1, 0] = pediatric_cm_norm[1, 0]
     sns.heatmap(adult_cm_norm, annot=True, cmap='Blues', ax=ax5,
                 xticklabels=['Pred Neg', 'Pred Pos'],
                 yticklabels=['True Neg', 'True Pos'],annot_kws={"size": 14, "weight": "bold"},
@@ -542,10 +542,10 @@ def ROC_figure_panel(results, target_results, save_folder):
     pediatric_cm = target_results["conf_matrix"]
     pediatric_cm_norm = pediatric_cm.astype('float') / pediatric_cm.sum(axis=1, keepdims=True)
     pediatric_cm_norm = np.ceil(pediatric_cm_norm * 100) / 100
-    pediatric_cm_norm[0, 0] = pediatric_cm_norm[0, 0]+0.02
-    pediatric_cm_norm[1, 1] = pediatric_cm_norm[1, 1]+0.02
-    pediatric_cm_norm[0, 1] = pediatric_cm_norm[0, 1]-0.02
-    pediatric_cm_norm[1, 0] = pediatric_cm_norm[1, 0]-0.02
+    pediatric_cm_norm[0, 0] = pediatric_cm_norm[0, 0]
+    pediatric_cm_norm[1, 1] = pediatric_cm_norm[1, 1]
+    pediatric_cm_norm[0, 1] = pediatric_cm_norm[0, 1]
+    pediatric_cm_norm[1, 0] = pediatric_cm_norm[1, 0]
     sns.heatmap(adult_cm_norm, annot=True, cmap='Blues', ax=ax2,
                 xticklabels=['Pred Neg', 'Pred Pos'],
                 yticklabels=['True Neg', 'True Pos'],annot_kws={"size": 14, "weight": "bold"},
